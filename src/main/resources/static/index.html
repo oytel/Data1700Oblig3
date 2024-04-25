@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kino Kjøp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script type="text/javascript">
+        function hallo() {
+            const url = "/?navn=" + $("#navn").val();
+
+            $.get(url, function(data) {
+                $("#hallo").html(data);
+            });
+        }
+    </script>
 </head>
 <body>
-$END$
+
+Skriv inn ditt navn: <input type="text" id="navn">
+
+<button onclick="hallo();">Trykk meg</button>
+
+<div id="hallo"></div>
+
 </body>
 </html>
