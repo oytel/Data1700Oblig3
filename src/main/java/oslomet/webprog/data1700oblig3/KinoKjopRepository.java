@@ -14,8 +14,8 @@ public class KinoKjopRepository {
     private JdbcTemplate db;
 
     public void lagreKinoKjop(KinoKjop kinoKjop) {
-        String sql = "INSERT INTO kinoKjop (film, antall, fornavn, etternavn, telefon, epost) VALUES (?,?,?,?,?,?)";
-        db.update(sql, kinoKjop.getFilm(), kinoKjop.getAntall(), kinoKjop.getFornavn(), kinoKjop.getTelefon(), kinoKjop.getEtternavn(), kinoKjop.getEmail());
+        String sql = "INSERT INTO kinoKjop (film, antall, fornavn, etternavn, telefonnr, epost) VALUES (?,?,?,?,?,?)";
+        db.update(sql, kinoKjop.getFilm(), kinoKjop.getAntall(), kinoKjop.getFornavn(), kinoKjop.getEtternavn(), kinoKjop.getTelefonnr(), kinoKjop.getEpost());
     }
 
     public List<KinoKjop> hentAlleKinoKjop() {
