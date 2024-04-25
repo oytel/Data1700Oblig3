@@ -5,24 +5,78 @@
     <title>Kino Kjøp</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <script type="text/javascript">
-        function hallo() {
-            const url = "/?navn=" + $("#navn").val();
-
-            $.get(url, function(data) {
-                $("#hallo").html(data);
-            });
+    <style>
+        div.one{
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            padding: 10px;
+            width: 500px;
         }
-    </script>
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="one">
+        <h1><b>Bestilling av kinobiletter</b></h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="velgF">Velg film:</label>
+                <div class="col-sm-10">
+                    <select id="velgF" onclick="validerFilm(this.value)">
+                        <option value="">Velg film her</option>
+                        <option value="Frost">Frost</option>
+                        <option value="Die Hard">Die Hard</option>
+                        <option value="Frost 2">Frost 2</option>
+                    </select><span id="feilFilm" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="antall">Antall</label>
+                <div class="col-sm-10">
+                    <input style="width: 15px" type="text" class="form-controll" id="antall" onchange="validerAntall(this.value)"/>
+                    <span id="feilAnt" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="fornavn">Fornavn</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-controll" id="fornavn" onchange="validerForNavn(this.value)"/>
+                    <span id="feilNavn" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="etternavn">Etternavn</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-controll" id="etternavn" onchange="validerEtterNavn(this.value)"/>
+                    <span id="feilNavn1" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="telefon">Telefonnr</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-controll" id="telefon" onchange="validerTele(this.value)"/>
+                    <span id="feilTele" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="conrol-label col-sm-2" for="mail">Epost</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-controll" id="mail" onchange="validerEpost(this.value)"/>
+                    <span id="feilEpost" style="color: red"></span>
+                </div>
+            </div>
+        </form>
+        <div class="form-group">
+            <input type="button" value="Kjøp billett" class="btn btn-primary" onclick="validerOgRegistrer()">
+        </div>
+        <h2><b>Alle biletter</b></h2>
+        <div id="kjop"></div>
+        <button class="btn btn-danger" onclick="slettKjop()">Slett alle bilettene</button>
+    </div>
+</div>
 
-Skriv inn ditt navn: <input type="text" id="navn">
-
-<button onclick="hallo();">Trykk meg</button>
-
-<div id="hallo"></div>
-
+<script src="index.js"></script>
+<script src="validering.js"></script>
 </body>
 </html>
