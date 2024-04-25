@@ -5,19 +5,9 @@
     <title>Kino Kjøp</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        div.one{
-            border-style: solid;
-            border-width: 2px;
-            border-color: blue;
-            padding: 10px;
-            width: 500px;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
-    <div class="one">
         <h1><b>Bestilling av kinobiletter</b></h1>
         <form class="form-horizontal">
             <div class="form-group">
@@ -66,14 +56,15 @@
                     <span id="feilEpost" style="color: red"></span>
                 </div>
             </div>
-        </form>
         <div class="form-group">
             <input type="button" value="Kjøp billett" class="btn btn-primary" onclick="validerOgRegistrer()">
         </div>
         <h2><b>Alle biletter</b></h2>
-        <div id="kjop"></div>
-        <button class="btn btn-danger" onclick="slettKjop()">Slett alle bilettene</button>
-    </div>
+        <div id="kjop" class="table-responsive"></div>
+            <div class="form-group">
+                <input type="button" value="Slett alle bilettene" class="btn btn-danger" onclick="slettKjop()">
+            </div>
+        </form>
 </div>
 
 <script src="index.js"></script>

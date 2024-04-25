@@ -1,2 +1,0 @@
-INSERT INTO KinoKjop (film, antall, fornavn, etternavn, telefon, epost) VALUES ('Tulle film', 3, 'tulling', 'Tulleveien', 14333333, 'Tulleby@gmail.com');
-INSERT INTO KinoKjop (film, antall, fornavn, etternavn, telefon, epost) VALUES ('Tulle film', 3, 'tulling', 'Tulleveien', 14333333, 'Tulleby@gmail.com');

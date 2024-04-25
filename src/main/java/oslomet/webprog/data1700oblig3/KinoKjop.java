@@ -1,28 +1,24 @@
 package oslomet.webprog.data1700oblig3;
 
 public class KinoKjop {
-    private int id;
     private String fornavn;
     private String etternavn;
-    private int telefon;
-    private String email;
+    private int telefonnr;
+    private String epost;
     private int antall;
     private String film;
 
-    public KinoKjop(int id, String film, int antall, String fornavn, String etternavn, int telefon, String email) {
-        this.id = id;
+    public KinoKjop(String film, int antall, String fornavn, String etternavn, int telefonnr, String epost) {
         this.film = film;
         this.antall = antall;
         this.fornavn = fornavn;
         this.etternavn = etternavn;
-        this.telefon = telefon;
-        this.email = email;
+        this.telefonnr = telefonnr;
+        this.epost = epost;
     }
 
     public KinoKjop() {
     }
-
-    public int getId() {return id;}
 
     public String getFilm() {
         return film;
@@ -40,15 +36,13 @@ public class KinoKjop {
         return etternavn;
     }
 
-    public int getTelefon() {
-        return telefon;
+    public int getTelefonnr() {
+        return telefonnr;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEpost() {
+        return epost;
     }
-
-    public void setId(int id) {this.id = id;}
 
     public void setFilm(String film) {
         this.film = film;
@@ -66,11 +60,11 @@ public class KinoKjop {
         this.etternavn = etternavn;
     }
 
-    public void setTelefon(int telefon) {
-        this.telefon = telefon;
+    public void setTelefonnr(int telefonnr) {
+        this.telefonnr = telefonnr;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEpost(String epost) {
+        this.epost = epost;
     }
 }
